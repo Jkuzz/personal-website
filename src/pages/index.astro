@@ -1,15 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import ContentSection from '../layouts/ContentSection.astro'
+
 import ToolCard from '../components/ToolCard.astro'
 import ProjectCard from '../components/ProjectCard.astro'
-import ContentSection from '../layouts/ContentSection.astro'
+import Scrollbar from '../components/Scrollbar.svelte'
 ---
 
 <Layout title="Personal website">
-  <main class="flex flex-col gap-24 p-4">
+  <main class="flex flex-col gap-24 p-4 pl-12">
+    <Scrollbar client:only />
     <section class="flex flex-row items-center justify-center gap-x-12 py-16">
-      <div class="w-96 border-b-2 border-l-4 border-r-2 border-t-4 border-black p-4">
-        <h1 class="text-xl font-bold">Hi! I'm Honza</h1>
+      <div class="h-64 w-96 border-b-2 border-l-4 border-r-2 border-t-4 border-black p-4">
+        <h1 class="pb-4 text-xl font-bold">Hi! I'm Honza!</h1>
         <p class="">Welcome to my little corner of the internet</p>
       </div>
       <img
@@ -25,7 +28,6 @@ import ContentSection from '../layouts/ContentSection.astro'
         <ToolCard title="Astro" />
         <ToolCard title="Vite" />
         <ToolCard title="TypeScript" />
-        <ToolCard title="Deno" />
         <ToolCard title="Python" />
         <ToolCard title="Java" />
         <ToolCard title="C#" />
