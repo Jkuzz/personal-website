@@ -1,17 +1,24 @@
 ---
 export interface Props {
   title: string
+  image: string
+  alt: string
 }
 
-const { title } = Astro.props
+const { title, image, alt } = Astro.props
 ---
 
-<li class="link-card">
-  <div class="w-48 border border-black p-4">
+<li class="flex w-96 flex-row rounded-md gap-x-4 bg-indigo-300 p-4">
+  <div class="flex flex-col justify-around">
     <h3 class="text-center font-bold">
       {title}
     </h3>
-    <slot />
     <p class="text-sm">Example text about the tool. Here I will say how and why I use it.</p>
   </div>
+  <img
+    class="h-32 w-32"
+    src={image}
+    alt={alt}
+  />
+
 </li>

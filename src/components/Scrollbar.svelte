@@ -16,7 +16,7 @@
 
 <aside class="p-2 fixed left-0 top-0 h-screen">
   <div
-    class="p-4 bg-rose-400"
+    class="p-4 bg-indigo-300"
     style="height: {(100 * scrollY) / (offsetHeight - innerHeight)}%;"
   />
 </aside>

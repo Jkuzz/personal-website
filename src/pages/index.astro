@@ -5,51 +5,90 @@ import ContentSection from '../layouts/ContentSection.astro'
 import ToolCard from '../components/ToolCard.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 import Scrollbar from '../components/Scrollbar.svelte'
+
+import { projects, coursework } from '../components/Projects'
 ---
 
 <Layout title="Personal website">
   <main class="flex flex-col gap-24 p-4 pl-12">
     <Scrollbar client:only />
-    <section class="flex flex-row items-center justify-center gap-x-12 py-16">
-      <div class="h-64 w-96 border-b-2 border-l-4 border-r-2 border-t-4 border-black p-4">
+    <section class="flex flex-row items-center justify-center py-16">
+      <div class="h-64 w-96 rounded-l-md bg-indigo-300 p-4">
         <h1 class="pb-4 text-xl font-bold">Hi! I'm Honza!</h1>
-        <p class="">Welcome to my little corner of the internet</p>
+        <p class="">I'm a software developer.</p>
       </div>
       <img
-        class="w-72 border-b-2 border-l-4 border-r-2 border-t-4 border-black"
+        class="w-72 rounded-md"
         src="profile.jpg"
       />
     </section>
 
-    <ContentSection title="Tools and Languages">
+    <ContentSection title="The tools I use">
       <ul class="flex flex-row flex-wrap justify-center gap-4">
-        <ToolCard title="VueJS" />
-        <ToolCard title="Tailwind" />
-        <ToolCard title="Astro" />
-        <ToolCard title="Vite" />
-        <ToolCard title="TypeScript" />
-        <ToolCard title="Python" />
-        <ToolCard title="Java" />
-        <ToolCard title="C#" />
-        <ToolCard title="Unity" />
+        <ToolCard
+          title="VueJS"
+          image="/Vue_Logo.svg"
+        />
+        <ToolCard
+          title="Tailwind"
+          image="/Tailwind_mark.svg"
+        />
+        <ToolCard
+          title="TypeScript"
+          image="/Typescript_logo_2020.svg"
+        />
+        <ToolCard
+          title="Vite"
+          image="/Vitejs-logo.svg"
+        />
+        <ToolCard
+          title="Astro"
+          image="astro-icon-dark.svg"
+        />
+        <ToolCard
+          title="Python"
+          image="Python-logo-notext.svg"
+        />
+        <ToolCard
+          title="Java"
+          image="java-icon.svg"
+        />
+        <ToolCard
+          title="C#"
+          image="Logo_C_sharp.svg"
+        />
+        <ToolCard
+          title="Unity"
+          image="Unity_2021.svg"
+        />
       </ul>
     </ContentSection>
 
     <ContentSection title="My Projects">
       <ul class="flex flex-row flex-wrap justify-center gap-4">
-        <ProjectCard title="Impromptu" />
-        <ProjectCard title="TypeSPARQ" />
-        <ProjectCard title="Tower Tower-Defence Defence" />
-        <ProjectCard title="Significant Other(S)" />
-        <ProjectCard title="Landmass Generation" />
-        <ProjectCard title="TSReporter" />
+        {
+          projects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              text={project.text}
+              img={project.img}
+            />
+          ))
+        }
       </ul>
     </ContentSection>
 
     <ContentSection title="Coursework">
       <ul class="flex flex-row flex-wrap justify-center gap-4">
-        <ProjectCard title="Point of Sale App" />
-        <ProjectCard title="GraphQL server" />
+        {
+          coursework.map((project) => (
+            <ProjectCard
+              title={project.title}
+              text={project.text}
+              img={project.img}
+            />
+          ))
+        }
       </ul>
     </ContentSection>
   </main>
