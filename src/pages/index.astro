@@ -2,73 +2,52 @@
 import Layout from '../layouts/Layout.astro'
 import ContentSection from '../layouts/ContentSection.astro'
 
-import ToolCard from '../components/ToolCard.astro'
+import ToolCard from '../components/ToolCard.svelte'
 import ProjectCard from '../components/ProjectCard.astro'
 import Scrollbar from '../components/Scrollbar.svelte'
+import BackgroundTexture from '../components/BackgroundTexture.svelte'
 
-import { projects, coursework } from '../components/Projects'
+import { projects, tools } from '../components/DisplayData'
 ---
 
 <Layout title="Personal website">
-  <main class="flex flex-col gap-24 p-4 pl-12">
-    <Scrollbar client:only />
-    <section class="flex flex-row items-center justify-center py-16">
-      <div class="h-64 w-96 rounded-l-md bg-indigo-300 p-4">
-        <h1 class="pb-4 text-xl font-bold">Hi! I'm Honza!</h1>
-        <p class="">I'm a software developer.</p>
+  <BackgroundTexture client:load />
+  <main class="flex flex-col gap-24">
+    <!-- <Scrollbar client:only /> -->
+    <section class="relative flex flex-row items-center justify-center bg-violet-600 py-24">
+      <div class="h-64 w-96 rounded-l-md p-4 text-white">
+        <h1 class="pb-4 text-4xl font-bold">Hi! I'm Honza!</h1>
+        <p class="text-xl">I'm a software developer.</p>
       </div>
       <img
-        class="w-72 rounded-md"
+        class="z-20 w-72 rounded-md"
         src="profile.jpg"
       />
+      <div class="absolute right-0 h-full w-[38vw] bg-amber-300"></div>
     </section>
 
-    <ContentSection title="The tools I use">
+    <ContentSection title="The tools I use" colour="light">
       <ul class="flex flex-row flex-wrap justify-center gap-4">
-        <ToolCard
-          title="VueJS"
-          image="/Vue_Logo.svg"
-        />
-        <ToolCard
-          title="Tailwind"
-          image="/Tailwind_mark.svg"
-        />
-        <ToolCard
-          title="TypeScript"
-          image="/Typescript_logo_2020.svg"
-        />
-        <ToolCard
-          title="Vite"
-          image="/Vitejs-logo.svg"
-        />
-        <ToolCard
-          title="Astro"
-          image="astro-icon-dark.svg"
-        />
-        <ToolCard
-          title="Python"
-          image="Python-logo-notext.svg"
-        />
-        <ToolCard
-          title="Java"
-          image="java-icon.svg"
-        />
-        <ToolCard
-          title="C#"
-          image="Logo_C_sharp.svg"
-        />
-        <ToolCard
-          title="Unity"
-          image="Unity_2021.svg"
-        />
+         {
+          tools.map((tool) => (
+            <ToolCard
+            client:load
+              title={tool.title}
+              text={tool.text}
+              image={tool.img}
+              alt=""
+            />
+          ))
+        }
       </ul>
     </ContentSection>
 
-    <ContentSection title="My Projects">
-      <ul class="flex flex-row flex-wrap justify-center gap-4">
+    <ContentSection title="The things I've built" colour="dark">
+      <ul class="flex flex-col items-center gap-8 xl:px-48">
         {
           projects.map((project) => (
             <ProjectCard
+              index={projects.indexOf(project)}
               title={project.title}
               text={project.text}
               img={project.img}
@@ -78,11 +57,12 @@ import { projects, coursework } from '../components/Projects'
       </ul>
     </ContentSection>
 
-    <ContentSection title="Coursework">
+    <!-- <ContentSection title="Coursework">
       <ul class="flex flex-row flex-wrap justify-center gap-4">
         {
           coursework.map((project) => (
             <ProjectCard
+              index={coursework.indexOf(project)}
               title={project.title}
               text={project.text}
               img={project.img}
@@ -90,7 +70,7 @@ import { projects, coursework } from '../components/Projects'
           ))
         }
       </ul>
-    </ContentSection>
+    </ContentSection> -->
   </main>
 </Layout>
 

@@ -1,15 +1,17 @@
 ---
 export interface Props {
+  index: number
   title: string
   text: string
   img?: string
   alt?: string
 }
 
-const { title } = Astro.props
+const { title, index } = Astro.props
+let zigZagClass = index % 2 == 0 ? 'self-start' : 'self-end'
 ---
 
-<li class="w-96 bg-indigo-300 rounded-md p-4">
+<li class:list={["w-[90vw] lg:w-[45vw] bg-gray-200 rounded-md p-4", zigZagClass]}>
   <h3 class="text-center font-bold">
     {title}
   </h3>
