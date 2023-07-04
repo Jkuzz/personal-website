@@ -6,7 +6,7 @@ export const tools = [
   },
   {
     title: 'Tailwind',
-    text: 'Tailwind is my go-to solution for styling pages. I find its clarity, scalability and performance incredible.',
+    text: 'Tailwind is my go-to solution for styling pages. I find its clarity, scalability and performance very useful.',
     img: 'Tailwind_mark.svg',
   },
   {
@@ -21,7 +21,7 @@ export const tools = [
   },
   {
     title: 'Python',
-    text: 'When I need to process or explore data, I usually use Python. The libraries in that area are very helpful.',
+    text: 'When I need to process or explore data, I usually use Python.',
     img: 'Python-logo-notext.svg',
   },
   {
@@ -52,31 +52,55 @@ export const projects = [
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
     img: 'Impromptu.webp',
     alt: 'Impromptu logo',
+    tools: ['TypeScript', 'Vue', 'Tailwind', 'OpenAPI', 'Pinia', 'Vite', 'Cypress'],
+    demoUrl: 'https://impromptu.fun',
   },
   {
     title: 'TypeSPARQ',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Impromptu.webp',
+    img: 'typesparq.webp',
+    alt: 'TypeSPARQ screenshot',
+    tools: ['Vue', 'Tailwind', 'SPARQL', 'Pinia', 'Vite'],
+    demoUrl: 'https://jkuzz.github.io/sparql-explorer',
+    githubUrl: 'https://github.com/Jkuzz/sparql-explorer',
+  },
+  {
+    title: 'Portfolio',
+    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    img: 'typesparq.webp',
+    alt: 'TypeSPARQ screenshot',
+    tools: ['Astro', 'Svelte', 'Tailwind', 'Vite'],
+    githubUrl: 'https://github.com/Jkuzz/personal-website',
   },
   {
     title: 'Tower Tower-Defence Defence',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Impromptu.webp',
+    img: 'TTDD.webp',
+    alt: 'Tower Tower-Defence Defence screenshot',
+    tools: ['TypeScript', 'PhaserJS'],
+    demoUrl: 'https://ldjam.com/events/ludum-dare/48/tower-tower-defence-defence',
+    githubUrl: 'https://github.com/allemansratten/LD48/',
   },
   {
     title: 'Significant Other(S)',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Impromptu.webp',
+    img: 'SOS.webp',
+    alt: 'Significant Other(S) screenshot',
+    tools: ['Godot', 'GDScript'],
+    demoUrl: 'https://ldjam.com/events/ludum-dare/50/significant-others',
+    githubUrl: 'https://github.com/allemansratten/sos/',
   },
   {
     title: 'TSReporter',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Impromptu.webp',
+    img: 'TSReporter.webp',
+    tools: ['Python', 'Tkinter', 'Selenium'],
   },
   {
     title: 'Landmass Generation',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
     img: 'Impromptu.webp',
+    tools: ['C#', 'Unity'],
   },
 ]
 

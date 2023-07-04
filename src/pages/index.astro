@@ -37,15 +37,18 @@ import { projects } from '../components/DisplayData'
       title="The things I've built"
       colour="dark"
     >
-      <ul class="pt-10 flex flex-col items-center gap-20 xl:px-48">
+      <ul class="flex flex-col items-center gap-16 py-10 xl:px-48">
         {
           projects.map((project) => (
             <ProjectCard
-            client:load
+              client:load
               index={projects.indexOf(project)}
               title={project.title}
               text={project.text}
               img={project.img}
+              tools={project.tools}
+              demoUrl={project.demoUrl}
+              githubUrl={project.githubUrl}
               alt="temp"
             />
           ))
