@@ -26,7 +26,7 @@ export const tools = [
   },
   {
     title: 'Java',
-    text: 'When developing more traditional applications, or when in need of an Object-oriented language, I reach for Java. I am familiar with it from the advanced courses I took at university.',
+    text: 'When in need of an Object-oriented language, I reach for Java. I am familiar with it from the advanced courses I took at university and have developed several small applications.',
     img: 'java-icon.svg',
   },
   {
@@ -50,32 +50,33 @@ export const projects = [
   {
     title: 'Impromptu',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
+    alt: 'Impromptu logo',
   },
   {
     title: 'TypeSPARQ',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
   },
   {
     title: 'Tower Tower-Defence Defence',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
   },
   {
     title: 'Significant Other(S)',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
   },
   {
     title: 'TSReporter',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
   },
   {
     title: 'Landmass Generation',
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
+    img: 'Impromptu.webp',
   },
 ]
 

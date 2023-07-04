@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import ContentSection from '../layouts/ContentSection.astro'
 
 import ToolScrollbar from '../components/ToolScrollbar.svelte'
-import ProjectCard from '../components/ProjectCard.astro'
+import ProjectCard from '../components/ProjectCard.svelte'
 import Scrollbar from '../components/Scrollbar.svelte'
 import BackgroundTexture from '../components/BackgroundTexture.svelte'
 
@@ -37,14 +37,16 @@ import { projects } from '../components/DisplayData'
       title="The things I've built"
       colour="dark"
     >
-      <ul class="flex flex-col items-center gap-8 xl:px-48">
+      <ul class="pt-10 flex flex-col items-center gap-20 xl:px-48">
         {
           projects.map((project) => (
             <ProjectCard
+            client:load
               index={projects.indexOf(project)}
               title={project.title}
               text={project.text}
               img={project.img}
+              alt="temp"
             />
           ))
         }
