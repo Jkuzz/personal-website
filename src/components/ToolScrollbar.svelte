@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex flex-col justify-center items-center">
-  <ul class="flex flex-row gap-8 overflow-x-auto max-w-screen">
+  <ul class="flex flex-row gap-8 overflow-x-auto max-w-screen py-4">
     {#each tools as tool}
       <ToolCard
         title={tool.title}

@@ -23,7 +23,7 @@
 
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <li
-  class="group flex-shrink-0 rounded-md bg-gray-200 hover:shadow-lg flex flex-col gap-4 p-4"
+  class="group flex-shrink-0 cursor-pointer rounded-md bg-gray-200 hover:shadow-lg flex flex-col gap-4 p-4"
   on:click={onExpand}
   on:keydown={onExpand}
 >
