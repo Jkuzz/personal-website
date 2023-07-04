@@ -2,12 +2,12 @@
 import Layout from '../layouts/Layout.astro'
 import ContentSection from '../layouts/ContentSection.astro'
 
-import ToolCard from '../components/ToolCard.svelte'
+import ToolScrollbar from '../components/ToolScrollbar.svelte'
 import ProjectCard from '../components/ProjectCard.astro'
 import Scrollbar from '../components/Scrollbar.svelte'
 import BackgroundTexture from '../components/BackgroundTexture.svelte'
 
-import { projects, tools } from '../components/DisplayData'
+import { projects } from '../components/DisplayData'
 ---
 
 <Layout title="Personal website">
@@ -26,23 +26,17 @@ import { projects, tools } from '../components/DisplayData'
       <div class="absolute right-0 h-full w-[38vw] bg-amber-300"></div>
     </section>
 
-    <ContentSection title="The tools I use" colour="light">
-      <ul class="flex flex-row flex-wrap justify-center gap-4">
-         {
-          tools.map((tool) => (
-            <ToolCard
-            client:load
-              title={tool.title}
-              text={tool.text}
-              image={tool.img}
-              alt=""
-            />
-          ))
-        }
-      </ul>
+    <ContentSection
+      title="The tools I use"
+      colour="light"
+    >
+      <ToolScrollbar client:load />
     </ContentSection>
 
-    <ContentSection title="The things I've built" colour="dark">
+    <ContentSection
+      title="The things I've built"
+      colour="dark"
+    >
       <ul class="flex flex-col items-center gap-8 xl:px-48">
         {
           projects.map((project) => (
