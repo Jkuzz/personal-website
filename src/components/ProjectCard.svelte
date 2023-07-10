@@ -52,7 +52,7 @@
         {title}
       </h3>
       <p class="text-sm">
-        {text}
+        {@html text}
       </p>
       <ul class="flex flex-row gap-2 flex-wrap">
         {#each tools as tool}

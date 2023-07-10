@@ -49,7 +49,7 @@ export const tools = [
 export const projects = [
   {
     title: 'Impromptu',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    text: 'Impromptu is a party game in which you and your friends give prompts to an AI art generator and try to trick each other into guessing your fake prompts. <br/> I am the main frontend contributor for Impromptu and am responsible for developing new features and implementing designs.',
     img: 'Impromptu.webp',
     alt: 'Impromptu logo',
     tools: ['TypeScript', 'Vue', 'Tailwind', 'OpenAPI', 'Pinia', 'Vite', 'Cypress'],
@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     title: 'TypeSPARQ',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    text: 'This tool facilitates schema extraction from public SPARQL endpoints. Created to simplify the exploration process, TypeSPARQ automatically extracts and visualises the schema. Finally, the extracted schema can be exported into TypeScript code to start issuing type-safe queries within minutes via <strong><a href="https://ldkit.io/" target="_blank">LDKit</a></strong>.',
     img: 'typesparq.webp',
     alt: 'TypeSPARQ screenshot',
     tools: ['TypeScript', 'Vue', 'Tailwind', 'SPARQL', 'Pinia', 'Vite'],
@@ -66,15 +66,21 @@ export const projects = [
   },
   {
     title: 'Portfolio',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    text: 'A simple static site to display some things about myself. Used this opportunity to get familiar with Svelte. You\'re looking at it right now!',
     img: 'typesparq.webp',
     alt: 'TypeSPARQ screenshot',
     tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
     githubUrl: 'https://github.com/Jkuzz/personal-website',
   },
   {
+    title: 'TSReporter',
+    text: 'App developed for the SCS Software QA team to streamline the bug reporting process. Uses Selenium to automatically pre-fill bug report forms from file metadata. This reduced the reporting time per bug from 2 minutes to under 30 seconds.',
+    img: 'TSReporter.webp',
+    tools: ['Python', 'Tkinter', 'Selenium'],
+  },
+  {
     title: 'Tower Tower-Defence Defence',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    text: 'Our recursive tower defence game created for Ludum Dare in 48 hours by 5 developers. Each tower in this game has a whole other tower defence game inside of it! Clear those inner levels to upgrade the tower. We ranked 13th in inovation out of the event\'s 3866 entries.',
     img: 'TTDD.webp',
     alt: 'Tower Tower-Defence Defence screenshot',
     tools: ['TypeScript', 'PhaserJS'],
@@ -83,18 +89,12 @@ export const projects = [
   },
   {
     title: 'Significant Other(S)',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
+    text: 'A funky partner-management game in which you\'re trying to not let them meet. Developed for Ludum Dare in 48 hours. As an extra challenge, the time included learning Godot and GDScript from scratch.',
     img: 'SOS.webp',
     alt: 'Significant Other(S) screenshot',
     tools: ['Godot', 'GDScript'],
     demoUrl: 'https://ldjam.com/events/ludum-dare/50/significant-others',
     githubUrl: 'https://github.com/allemansratten/sos/',
-  },
-  {
-    title: 'TSReporter',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'TSReporter.webp',
-    tools: ['Python', 'Tkinter', 'Selenium'],
   },
   // {
   //   title: 'Landmass Generation',
