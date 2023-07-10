@@ -12,43 +12,55 @@
   export let githubUrl: string | undefined = undefined
   export let demoUrl: string | undefined = undefined
 
-  let zigZagClass = index % 2 == 0 ? '-left-60' : '-right-60'
+  let zigZagClass = index % 2 == 0 ? '-left-10' : '-right-10'
   let zigZagWrapperClass = index % 2 == 0 ? 'self-start' : 'self-end'
+  const defaultImageOffset = index % 2 == 0 ? 200 : -200
 
-  const imgTranslate = tweened(0, { duration: 500, easing: cubicOut })
+  const imgTranslate = tweened(defaultImageOffset, { duration: 500, easing: cubicOut })
 
   function onMouseEnter() {
-    let targetOffset = index % 2 == 0 ? 130 : -130
+    let targetOffset = index % 2 == 0 ? 300 : -300
     imgTranslate.set(targetOffset)
   }
 
   function onMouseLeave() {
-    imgTranslate.set(0)
+    imgTranslate.set(defaultImageOffset)
   }
 </script>
 
-<li class={'flex flex-row relative ' + zigZagWrapperClass}>
+<li class={'flex flex-col relative ' + zigZagWrapperClass}>
   <ConditionaWrapper
     condition={!!demoUrl}
     href={demoUrl}
     target="_blank"
-    class="cursor-pointer"
   >
     <img
       style="transform: translateX({$imgTranslate}px);"
       src={img}
       {alt}
-      class="w-[90vw] md:w-[70vw] lg:w-[40vw] hover:shadow-lg rounded-md"
+      class="hidden md:block w-[90vw] md:w-[60vw] lg:w-[50vw] xl:w-[40vw] hover:shadow-lg rounded-md"
       on:mouseenter={onMouseEnter}
       on:mouseleave={onMouseLeave}
     />
   </ConditionaWrapper>
 
-  <div
-    class={'flex w-96 absolute bg-gray-200 text-black rounded-md -top-10 -bottom-10 ' + zigZagClass}
+  <ConditionaWrapper
+    condition={!!demoUrl}
+    href={demoUrl}
+    target="_blank"
   >
-    <div class="p-4 flex flex-col justify-between">
-      <h3 class="text-center font-bold whitespace-nowrap">
+    <img
+      src={img}
+      {alt}
+      class="md:hidden rounded-t-md"
+    />
+  </ConditionaWrapper>
+  <div
+    class={'flex md:w-96 md:min-h-[20rem] md:absolute bg-gray-200 text-black rounded-b-md md:rounded-md md:-top-10 md:-bottom-10 ' +
+      zigZagClass}
+  >
+    <div class="p-4 flex flex-col gap-y-4 justify-between">
+      <h3 class="text-center font-bold text-xl whitespace-nowrap">
         {title}
       </h3>
       <p class="text-sm">

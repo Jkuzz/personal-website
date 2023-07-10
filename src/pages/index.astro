@@ -2,16 +2,18 @@
 import Layout from '../layouts/Layout.astro'
 import ContentSection from '../layouts/ContentSection.astro'
 
+import PageHeader from '../components/PageHeader.svelte'
 import ToolScrollbar from '../components/ToolScrollbar.svelte'
 import ProjectCard from '../components/ProjectCard.svelte'
 import Scrollbar from '../components/Scrollbar.svelte'
-import BackgroundTexture from '../components/BackgroundTexture.svelte'
+// import BackgroundTexture from '../components/BackgroundTexture.svelte'
 
 import { projects } from '../components/DisplayData'
 ---
 
 <Layout title="Personal website">
-  <BackgroundTexture client:load />
+  <PageHeader client:load />
+  <!-- <BackgroundTexture client:load /> -->
   <main class="flex flex-col gap-24">
     <!-- <Scrollbar client:only /> -->
     <section class="relative flex flex-row items-center justify-center bg-violet-600 py-24">
@@ -37,7 +39,9 @@ import { projects } from '../components/DisplayData'
       title="The things I've built"
       colour="dark"
     >
-      <ul class="flex flex-col items-center gap-16 py-10 xl:px-[20vw]">
+      <ul
+        class="flex flex-col items-center gap-16 px-20 py-10 md:gap-44 lg:px-40 xl:gap-16 xl:px-[8vw]"
+      >
         {
           projects.map((project) => (
             <ProjectCard
