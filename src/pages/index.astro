@@ -12,11 +12,14 @@ import { projects } from '../components/DisplayData'
 ---
 
 <Layout title="Personal website">
-  <PageHeader client:load />
+  <PageHeader client:only />
   <!-- <BackgroundTexture client:load /> -->
   <main class="flex flex-col gap-24">
     <!-- <Scrollbar client:only /> -->
-    <section class="relative flex flex-row items-center justify-center bg-violet-600 py-24">
+    <section
+      id="section-hello"
+      class="relative flex flex-row items-center justify-center bg-violet-600 py-24"
+    >
       <div class="h-64 w-96 rounded-l-md p-4 text-white">
         <h1 class="pb-4 text-4xl font-bold">Hi! I'm Honza!</h1>
         <p class="text-xl">I'm a software developer.</p>
@@ -29,6 +32,7 @@ import { projects } from '../components/DisplayData'
     </section>
 
     <ContentSection
+      id="section-tools"
       title="The tools I use"
       colour="light"
     >
@@ -36,6 +40,7 @@ import { projects } from '../components/DisplayData'
     </ContentSection>
 
     <ContentSection
+      id="section-projects"
       title="The things I've built"
       colour="dark"
     >
@@ -58,6 +63,14 @@ import { projects } from '../components/DisplayData'
           ))
         }
       </ul>
+    </ContentSection>
+
+    <ContentSection
+      id="section-contact"
+      title="Connect with me!"
+      colour="light"
+    >
+      TODO
     </ContentSection>
 
     <!-- <ContentSection title="Coursework">

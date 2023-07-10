@@ -3,9 +3,10 @@ import { cva, type VariantProps } from 'class-variance-authority'
 
 export interface Props extends VariantProps<typeof section> {
   title: string
+  id: string
 }
 
-const { title, colour = 'light' } = Astro.props
+const { title, colour = 'light', id } = Astro.props
 
 const section = cva(['flex flex-col w-screen py-8'], {
   variants: {
@@ -17,7 +18,10 @@ const section = cva(['flex flex-col w-screen py-8'], {
 })
 ---
 
-<section class={section({colour})}>
+<section
+  id={id}
+  class={section({ colour })}
+>
   <h2 class="p-4 text-center text-2xl font-bold">{title}</h2>
   <slot />
 </section>
