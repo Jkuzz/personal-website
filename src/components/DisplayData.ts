@@ -65,18 +65,18 @@ export const projects = [
     githubUrl: 'https://github.com/Jkuzz/sparql-explorer',
   },
   {
-    title: 'Portfolio',
-    text: 'A simple static site to display some things about myself. Used this opportunity to get familiar with Svelte. You\'re looking at it right now!',
-    img: 'typesparq.webp',
-    alt: 'TypeSPARQ screenshot',
-    tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
-    githubUrl: 'https://github.com/Jkuzz/personal-website',
-  },
-  {
     title: 'TSReporter',
     text: 'App developed for the SCS Software QA team to streamline the bug reporting process. Uses Selenium to automatically pre-fill bug report forms from file metadata. This reduced the reporting time per bug from 2 minutes to under 30 seconds.',
     img: 'TSReporter.webp',
     tools: ['Python', 'Tkinter', 'Selenium'],
+  },
+  {
+    title: 'Portfolio',
+    text: 'A simple static site to showcase myself. Used this opportunity to get familiar with Svelte. You\'re looking at it right now!',
+    img: 'typesparq.webp',
+    alt: 'TypeSPARQ screenshot',
+    tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
+    githubUrl: 'https://github.com/Jkuzz/personal-website',
   },
   {
     title: 'Tower Tower-Defence Defence',

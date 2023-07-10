@@ -41,7 +41,7 @@ import { projects } from '../components/DisplayData'
         {
           projects.map((project) => (
             <ProjectCard
-              client:load
+              client:visible
               index={projects.indexOf(project)}
               title={project.title}
               text={project.text}

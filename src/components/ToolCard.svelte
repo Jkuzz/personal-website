@@ -1,7 +1,9 @@
 <script lang="ts">
-  import { fly, scale } from 'svelte/transition'
   import { tweened } from 'svelte/motion'
   import { cubicOut } from 'svelte/easing'
+  import { createEventDispatcher } from 'svelte'
+
+  const dispatch = createEventDispatcher()
 
   export let title: string
   export let image: string
@@ -14,8 +16,10 @@
     expanded = !expanded
     if (expanded) {
       cardWidth.set(256)
+      dispatch('expand', { width: 256 })
     } else {
       cardWidth.set(0)
+      dispatch('expand', { width: 0 })
     }
   }
   const cardWidth = tweened(0, { duration: 400, easing: cubicOut })
@@ -26,6 +30,7 @@
   class="group flex-shrink-0 cursor-pointer rounded-md bg-gray-200 hover:shadow-lg flex flex-col gap-4 p-4"
   on:click={onExpand}
   on:keydown={onExpand}
+  {...$$restProps}
 >
   <h3 class="text-center font-bold">
     {title}
