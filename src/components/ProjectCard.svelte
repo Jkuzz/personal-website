@@ -1,6 +1,7 @@
 <script lang="ts">
   import { tweened } from 'svelte/motion'
   import { cubicOut } from 'svelte/easing'
+  import ConditionaWrapper from './ConditionalWrapper.svelte'
 
   export let index: number
   export let title: string
@@ -11,42 +12,46 @@
   export let githubUrl: string | undefined = undefined
   export let demoUrl: string | undefined = undefined
 
-  let zigZagClass = index % 2 == 0 ? 'self-start' : 'self-end'
+  let zigZagClass = index % 2 == 0 ? '-left-60' : '-right-60'
+  let zigZagWrapperClass = index % 2 == 0 ? 'self-start' : 'self-end'
 
-  let expanded = false
-  const sidebarWidth = tweened(0, { duration: 300, easing: cubicOut })
+  const imgTranslate = tweened(0, { duration: 500, easing: cubicOut })
 
-  function onClick() {
-    if (expanded) {
-      sidebarWidth.set(0)
-    } else {
-      sidebarWidth.set(21)
-    }
+  function onMouseEnter() {
+    let targetOffset = index % 2 == 0 ? 130 : -130
+    imgTranslate.set(targetOffset)
+  }
 
-    expanded = !expanded
+  function onMouseLeave() {
+    imgTranslate.set(0)
   }
 </script>
 
-<li class="flex flex-row">
-  <button
+<li class={'flex flex-row relative ' + zigZagWrapperClass}>
+  <ConditionaWrapper
+    condition={!!demoUrl}
+    href={demoUrl}
+    target="_blank"
     class="cursor-pointer"
-    on:click={onClick}
   >
     <img
+      style="transform: translateX({$imgTranslate}px);"
       src={img}
       {alt}
-      class="w-[90vw] md:w-[70vw] lg:w-[40vw] hover:shadow-xl"
+      class="w-[90vw] md:w-[70vw] lg:w-[40vw] hover:shadow-lg rounded-md"
+      on:mouseenter={onMouseEnter}
+      on:mouseleave={onMouseLeave}
     />
-  </button>
+  </ConditionaWrapper>
+
   <div
-    style="width: {$sidebarWidth}rem"
-    class="flex overflow-hidden bg-gray-200 text-black rounded-r-md"
+    class={'flex w-96 absolute bg-gray-200 text-black rounded-md -top-10 -bottom-10 ' + zigZagClass}
   >
     <div class="p-4 flex flex-col justify-between">
       <h3 class="text-center font-bold whitespace-nowrap">
         {title}
       </h3>
-      <p class="text-sm w-80">
+      <p class="text-sm">
         {text}
       </p>
       <ul class="flex flex-row gap-2 flex-wrap">
@@ -58,14 +63,26 @@
         {#if githubUrl}
           <a
             target="_blank"
-            href={githubUrl}>Source Code</a
+            href={githubUrl}
+            class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
           >
+            <img
+              src="Github.svg"
+              alt="Source code"
+            />
+          </a>
         {/if}
         {#if demoUrl}
           <a
             target="_blank"
-            href={demoUrl}>Live demo</a
+            href={demoUrl}
+            class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
           >
+            <img
+              src="icon_web.svg"
+              alt="Live site"
+            />
+          </a>
         {/if}
       </div>
     </div>

@@ -60,7 +60,7 @@ export const projects = [
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
     img: 'typesparq.webp',
     alt: 'TypeSPARQ screenshot',
-    tools: ['Vue', 'Tailwind', 'SPARQL', 'Pinia', 'Vite'],
+    tools: ['TypeScript', 'Vue', 'Tailwind', 'SPARQL', 'Pinia', 'Vite'],
     demoUrl: 'https://jkuzz.github.io/sparql-explorer',
     githubUrl: 'https://github.com/Jkuzz/sparql-explorer',
   },
@@ -69,7 +69,7 @@ export const projects = [
     text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
     img: 'typesparq.webp',
     alt: 'TypeSPARQ screenshot',
-    tools: ['Astro', 'Svelte', 'Tailwind', 'Vite'],
+    tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
     githubUrl: 'https://github.com/Jkuzz/personal-website',
   },
   {
