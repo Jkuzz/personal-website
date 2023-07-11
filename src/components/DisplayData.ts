@@ -1,6 +1,7 @@
 import typescriptLogo from '../assets/Typescript-logo.svg'
 import vueLogo from '../assets/Vue-logo.svg'
 import tailwindLogo from '../assets/Tailwind-logo.svg'
+import viteLogo from '../assets/Vitejs-logo.svg'
 import astroLogo from '../assets/Astro-logo.svg'
 import svelteLogo from '../assets/Svelte-logo.svg'
 import pythonLogo from '../assets/Python-logo.svg'
@@ -22,6 +23,11 @@ export const tools = [
     title: 'Tailwind',
     text: 'Tailwind is my go-to solution for styling pages. I find its clarity, scalability and performance very useful.',
     img: tailwindLogo,
+  },
+  {
+    title: 'Vite',
+    text: 'Vite\'s speed and comfort of use makes it my obvious choice as a bundler and build tool. Since finding it, I have used it in every website project.',
+    img: viteLogo,
   },
   {
     title: 'Astro',
