@@ -7,5 +7,5 @@ import svelte from '@astrojs/svelte'
 export default defineConfig({
   integrations: [tailwind(), svelte()],
   site: 'https://jkuzz.github.io',
-  base: '/personal-website',
+  base: '/about-me',
 })
