@@ -2,6 +2,8 @@
   import { tweened } from 'svelte/motion'
   import { cubicOut } from 'svelte/easing'
   import ConditionaWrapper from './ConditionalWrapper.svelte'
+  import gitLogo from '../assets/Github-logo.svg'
+  import webIcon from '../assets/icon_web.svg'
 
   export let index: number
   export let title: string
@@ -79,7 +81,7 @@
             class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
           >
             <img
-              src="Github.svg"
+              src={gitLogo}
               alt="Source code"
             />
           </a>
@@ -91,7 +93,7 @@
             class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
           >
             <img
-              src="icon_web.svg"
+              src={webIcon}
               alt="Live site"
             />
           </a>

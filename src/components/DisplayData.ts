@@ -1,38 +1,47 @@
+import typescriptLogo from '../assets/Typescript-logo.svg'
+import vueLogo from '../assets/Vue-logo.svg'
+import tailwindLogo from '../assets/Tailwind-logo.svg'
+import astroLogo from '../assets/Astro-logo.svg'
+import svelteLogo from '../assets/Svelte-logo.svg'
+import pythonLogo from '../assets/Python-logo.svg'
+import javaLogo from '../assets/Java-logo.svg'
+import gitLogo from '../assets/Github-logo.svg'
+
 export const tools = [
   {
     title: 'TypeScript',
     text: 'TypeScript is my primary web development language. The safety and maintainability it provides makes it essential.',
-    img: 'Typescript_logo_2020.svg',
+    img: typescriptLogo,
   },
   {
     title: 'VueJS',
     text: "I've had a great experience with Vue when building websites in a team. The docs, the tooling and the community are very helpful and the development process is smooth.",
-    img: 'Vue_Logo.svg',
+    img: vueLogo,
   },
   {
     title: 'Tailwind',
     text: 'Tailwind is my go-to solution for styling pages. I find its clarity, scalability and performance very useful.',
-    img: 'Tailwind_mark.svg',
+    img: tailwindLogo,
   },
   {
     title: 'Astro',
     text: 'Astro has become my solution for building static sites such as this one. I love the performance and simplicity of only shipping snippets of JS.',
-    img: 'astro-icon-dark.svg',
+    img: astroLogo,
   },
   {
     title: 'Svelte',
     text: 'I am learning Svelte and made this website using it to test it out!',
-    img: 'Svelte_Logo.svg',
+    img: svelteLogo,
   },
   {
     title: 'Python',
     text: 'When I need to process or explore data, I usually use Python.',
-    img: 'Python-logo-notext.svg',
+    img: pythonLogo,
   },
   {
     title: 'Java',
     text: 'When I need an Object-oriented language, I use Java. I am familiar with it from the advanced courses I took at university.',
-    img: 'java-icon.svg',
+    img: javaLogo,
   },
   // {
   //   title: 'Unity',
@@ -42,7 +51,7 @@ export const tools = [
   {
     title: 'Git',
     text: 'I use Git for version control on every project and host most of them on GitHub. For larger projects, I use GitHub Actions too.',
-    img: 'Github.svg',
+    img: gitLogo,
   },
 ]
 
@@ -116,3 +125,4 @@ export const coursework = [
     img: 'Vue_Logo.svg',
   },
 ]
+

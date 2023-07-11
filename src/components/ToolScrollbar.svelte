@@ -1,6 +1,6 @@
 <script lang="ts">
   import ToolCard from '../components/ToolCard.svelte'
-  import { tools } from '../components/DisplayData'
+  import { tools } from './DisplayData'
   import { tweened } from 'svelte/motion'
   import { cubicOut } from 'svelte/easing'
 

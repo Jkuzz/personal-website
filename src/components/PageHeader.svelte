@@ -23,7 +23,6 @@
         const isVisible = offsetTop != undefined && y >= offsetTop - 150
         if (isVisible) {
           activeSectionId = section.id
-          console.log('setting active: ' + section.header)
         }
       }
     }
