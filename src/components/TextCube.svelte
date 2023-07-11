@@ -1,8 +1,8 @@
 <script lang="ts">
   import { tweened } from 'svelte/motion'
-  import { cubicInOut } from 'svelte/easing'
+  import { quadInOut } from 'svelte/easing'
 
-  const cubeRotate = tweened(0, { duration: 700, easing: cubicInOut })
+  const cubeRotate = tweened(0, { duration: 700, easing: quadInOut })
 
   const cubeFaceOptions = [
     'Software engineer',
@@ -21,10 +21,10 @@
   const cubeFaces = ['Software engineer', 'Web developer', '', '']
 
   window.setInterval(() => {
-    const backFaceIndex = ($cubeRotate * 4 + 2) % 6
+    const backFaceIndex = ($cubeRotate * 4 + 2) % 4
     const unusedFaces = cubeFaceOptions.filter((face) => !cubeFaces.includes(face))
     cubeFaces[backFaceIndex] = unusedFaces[Math.floor(Math.random() * unusedFaces.length)]
-    cubeRotate.set(($cubeRotate + 0.25) % 2)
+    cubeRotate.set(($cubeRotate + 0.25) % 3)
   }, 3000)
 </script>
 

@@ -70,7 +70,7 @@
 <svelte:window bind:innerWidth />
 
 <div class="tools flex flex-col relative items-center">
-  <ul class="flex flex-row gap-8 overflow-x-hidden py-4 max-w-[100vw]">
+  <ul class="flex flex-row items-start gap-8 overflow-x-hidden py-4 max-w-[100vw]">
     {#each tools as tool, index (tools.indexOf(tool))}
       <ToolCard
         title={tool.title}
@@ -86,13 +86,13 @@
   </ul>
   {#if widthDiff < 0}
     <button
-      class="absolute left-4 top-24 p-3 rounded-full border bg-gray-200 bg-opacity-70 border-violet-300 font-bold text-xl hover:text-2xl transition-all"
+      class="absolute left-4 top-24 p-3 rounded-full border select-none focus:bg-violet-300 bg-gray-200 bg-opacity-70 border-violet-300 font-bold text-xl hover:text-2xl transition-all"
       on:click={() => onScroll('left')}
     >
       &lt;
     </button>
     <button
-      class="absolute right-4 top-24 p-3 rounded-full border bg-gray-200 bg-opacity-70 border-violet-300 font-bold text-xl hover:text-2xl transition-all"
+      class="absolute right-4 top-24 p-3 rounded-full border select-none focus:bg-violet-300 bg-gray-200 bg-opacity-70 border-violet-300 font-bold text-xl hover:text-2xl transition-all"
       on:click={() => onScroll('right')}
     >
       &gt;

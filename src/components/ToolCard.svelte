@@ -34,7 +34,7 @@
   on:keydown={onExpand}
   {...$$restProps}
 >
-  <h3 class="text-center font-bold">
+  <h3 class="text-center font-bold select-none">
     {title}
   </h3>
   <div class="flex flex-row justify-around">
@@ -42,7 +42,7 @@
       style="max-width: {$cardWidth}px;"
       class="overflow-hidden"
     >
-      <p class="text-sm w-44 md:w-64 p-2">
+      <p class="text-sm w-44 md:w-64 p-2 select-none">
         {text}
       </p>
     </div>
