@@ -78,7 +78,7 @@
           <a
             target="_blank"
             href={githubUrl}
-            class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
+            class="w-6 m-1 hover:-translate-y-1 hover:rotate-6 origin-bottom-right transition-all"
           >
             <img
               src={gitLogo}
@@ -90,7 +90,7 @@
           <a
             target="_blank"
             href={demoUrl}
-            class="w-6 m-1 hover:w-8 hover:m-0 transition-all"
+            class="w-6 m-1 hover:-translate-y-1 hover:rotate-6 origin-bottom-right transition-all"
           >
             <img
               src={webIcon}
