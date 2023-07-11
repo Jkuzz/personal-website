@@ -29,11 +29,6 @@ export const tools = [
     img: astroLogo,
   },
   {
-    title: 'Svelte',
-    text: 'I am learning Svelte and made this website using it to test it out!',
-    img: svelteLogo,
-  },
-  {
     title: 'Python',
     text: 'When I need to process or explore data, I usually use Python.',
     img: pythonLogo,
@@ -50,8 +45,13 @@ export const tools = [
   // },
   {
     title: 'Git',
-    text: 'I use Git for version control on every project and host most of them on GitHub. For larger projects, I use GitHub Actions too.',
+    text: 'I use Git for version control on every project and host most of them on GitHub. For larger projects, I use GitHub Actions for CI.',
     img: gitLogo,
+  },
+  {
+    title: 'Svelte',
+    text: 'I am learning Svelte and made this website using it to test it out!',
+    img: svelteLogo,
   },
 ]
 
@@ -125,4 +125,3 @@ export const coursework = [
     img: 'Vue_Logo.svg',
   },
 ]
-
