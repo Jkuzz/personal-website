@@ -26,7 +26,7 @@ export const tools = [
   },
   {
     title: 'Vite',
-    text: 'Vite\'s speed and comfort of use makes it my obvious choice as a bundler and build tool. Since finding it, I have used it in every website project.',
+    text: "Vite's speed and comfort of use makes it my obvious choice as a bundler and build tool. Since finding it, I have used it in every website project.",
     img: viteLogo,
   },
   {
@@ -89,7 +89,7 @@ export const projects = [
   {
     title: 'Portfolio',
     text: "A small static site to showcase myself and my projects. I used this opportunity to get familiar with Svelte and improve my responsive design skills. You're looking at it right now!",
-    img: 'portfolio-1.png',
+    img: 'portfolio.webp',
     alt: 'Portfolio screenshot',
     tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
     githubUrl: 'https://github.com/Jkuzz/personal-website',
