@@ -21,7 +21,6 @@
   }
 
   function scrollToTarget() {
-    console.log(document.querySelector(targetId))
     document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -35,7 +34,7 @@
 </script>
 
 <button
-  class="font-bold text-violet-900 cursor-pointer"
+  class="font-bold text-amber-300 md:text-violet-900 cursor-pointer"
   on:mouseenter={onMouseOver}
   on:mouseleave={onMouseOut}
   bind:clientWidth={elementWidth}
@@ -44,6 +43,6 @@
   <slot />
   <div
     style="width: {$underlineWidth}px;"
-    class="h-[2px] rounded-sm bg-violet-900"
+    class="h-[2px] rounded-sm bg-amber-300 md:bg-violet-900"
   />
 </button>
