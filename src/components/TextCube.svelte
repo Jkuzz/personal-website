@@ -7,10 +7,12 @@
   const cubeFaceOptions = [
     'Software engineer',
     'Web developer',
+    'Frontend developer',
     'Problem solver',
     'Learner',
     'Tech nerd',
     'Data enjoyer',
+    'Experimenter',
   ]
 
   /**
@@ -19,7 +21,7 @@
   const cubeFaces = ['Software engineer', 'Web developer', '', '']
 
   window.setInterval(() => {
-    const backFaceIndex = ($cubeRotate * 4 + 2) % 4
+    const backFaceIndex = ($cubeRotate * 4 + 2) % 6
     const unusedFaces = cubeFaceOptions.filter((face) => !cubeFaces.includes(face))
     cubeFaces[backFaceIndex] = unusedFaces[Math.floor(Math.random() * unusedFaces.length)]
     cubeRotate.set(($cubeRotate + 0.25) % 2)
@@ -55,8 +57,8 @@
   }
 
   .cube > div {
-    -webkit-box-shadow: 0 0 8px 0 rgba(203, 191, 207, 0.1) inset;
-    box-shadow: 0 0 8px 0 rgba(203, 191, 207, 0.1) inset;
+    -webkit-box-shadow: 0 0 8px 0 rgba(203, 191, 207, 0.2) inset;
+    box-shadow: 0 0 8px 0 rgba(203, 191, 207, 0.2) inset;
   }
 
   /* Position the faces */
