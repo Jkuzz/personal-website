@@ -4,9 +4,22 @@
 
   const cubeRotate = tweened(0, { duration: 700, easing: cubicInOut })
 
+  const cubeFaceOptions = [
+    'Software engineer',
+    'Web developer',
+    'Problem solver',
+    'Learner',
+    'Tech nerd',
+    'Data enjoyer',
+  ]
+
+  const cubeFaces = ['Software engineer', 'Web developer', 'Problem solver', 'Tech nerd']
+
   window.setInterval(() => {
-    cubeRotate.set($cubeRotate + 0.25)
-    console.log('rotating to ' + $cubeRotate)
+    const backFaceIndex = ($cubeRotate * 4 + 2) % 4
+    const unusedFaces = cubeFaceOptions.filter((face) => !cubeFaces.includes(face))
+    cubeFaces[backFaceIndex] = unusedFaces[Math.floor(Math.random() * unusedFaces.length)]
+    cubeRotate.set(($cubeRotate + 0.25) % 2)
   }, 3000)
 </script>
 
@@ -15,16 +28,16 @@
   style="transform: rotate3d(1, 0, 0, {$cubeRotate}turn);"
 >
   <div class="front-face bg-violet-600 h-10 flex items-center justify-center">
-    <h1 class="my-auto">Software engineer</h1>
+    <span>{cubeFaces[0]}</span>
   </div>
   <div class="bottom-face bg-violet-600 h-10 flex items-center justify-center">
-    <h2>Web developer</h2>
+    <span>{cubeFaces[1]}</span>
   </div>
   <div class="back-face bg-violet-600 h-10 flex items-center justify-center">
-    <h2>Software developer</h2>
+    <span>{cubeFaces[2]}</span>
   </div>
   <div class="top-face bg-violet-600 h-10 flex items-center justify-center">
-    <h2>Web developer</h2>
+    <span>{cubeFaces[3]}</span>
   </div>
 </div>
 
@@ -60,7 +73,7 @@
   }
 
   .top-face {
-    -webkit-transform: rotateX(-270deg) translateZ(140px) ;
+    -webkit-transform: rotateX(-270deg) translateZ(140px);
     transform: rotateX(-270deg) translateZ(140px);
   }
 </style>
