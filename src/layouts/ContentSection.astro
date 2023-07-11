@@ -8,7 +8,7 @@ export interface Props extends VariantProps<typeof section> {
 
 const { title, colour = 'light', id } = Astro.props
 
-const section = cva(['flex flex-col w-screen py-8'], {
+const section = cva(['flex flex-col w-screen py-16'], {
   variants: {
     colour: {
       dark: ['bg-violet-600 text-white'],
