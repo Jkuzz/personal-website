@@ -57,7 +57,6 @@
   }
 
   function onToolClick(toolIndex: number) {
-    console.log(widthDiff)
     window.setTimeout(() => scrollToTool(toolIndex), 401)
   }
 

@@ -7,13 +7,13 @@ import TextCube from '../components/TextCube.svelte'
 import PageHeader from '../components/PageHeader.svelte'
 import ToolScrollbar from '../components/ToolScrollbar.svelte'
 import ProjectCard from '../components/ProjectCard.svelte'
-import Scrollbar from '../components/Scrollbar.svelte'
+// import Scrollbar from '../components/Scrollbar.svelte'
 // import BackgroundTexture from '../components/BackgroundTexture.svelte'
 
 import { projects } from '../components/DisplayData'
 ---
 
-<Layout title="Personal website">
+<Layout title="Jan Kuželík | Software engineer">
   <PageHeader client:only />
   <!-- <BackgroundTexture client:load /> -->
   <main class="flex flex-col">
@@ -81,21 +81,6 @@ import { projects } from '../components/DisplayData'
     >
       <SocialMedia />
     </ContentSection>
-
-    <!-- <ContentSection title="Coursework">
-      <ul class="flex flex-row flex-wrap justify-center gap-4">
-        {
-          coursework.map((project) => (
-            <ProjectCard
-              index={coursework.indexOf(project)}
-              title={project.title}
-              text={project.text}
-              img={project.img}
-            />
-          ))
-        }
-      </ul>
-    </ContentSection> -->
   </main>
 </Layout>
 

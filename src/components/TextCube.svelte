@@ -13,7 +13,10 @@
     'Data enjoyer',
   ]
 
-  const cubeFaces = ['Software engineer', 'Web developer', 'Problem solver', 'Tech nerd']
+  /**
+   * The faces of the cube. The back face gets replaced on every spin.
+   */
+  const cubeFaces = ['Software engineer', 'Web developer', '', '']
 
   window.setInterval(() => {
     const backFaceIndex = ($cubeRotate * 4 + 2) % 4

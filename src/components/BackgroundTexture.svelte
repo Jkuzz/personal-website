@@ -2,7 +2,6 @@
   let mousePos = { x: 0, y: 0 }
   function onMouseMove(event: MouseEvent) {
     mousePos = { x: event.x, y: event.y }
-    console.log(event)
   }
 </script>
 
