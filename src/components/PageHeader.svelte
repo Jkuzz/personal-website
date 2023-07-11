@@ -36,7 +36,9 @@
 
 <div class="fixed top-0 z-50 flex h-10 w-screen flex-row items-stretch">
   <div class="w-0 md:w-[62vw] bg-violet-600" />
-  <nav class="flex w-full md:w-[38vw] px-4 flex-row items-center justify-end gap-4 bg-violet-600 md:bg-amber-300">
+  <nav
+    class="flex w-full md:w-[38vw] px-4 flex-row items-center justify-end gap-4 bg-violet-600 md:bg-amber-300"
+  >
     {#each sectionLinks as section}
       <HeaderLink
         targetId={section.id}

@@ -34,7 +34,7 @@
 </script>
 
 <button
-  class="font-bold text-amber-300 md:text-violet-900 cursor-pointer"
+  class="font-bold text-amber-100 md:text-violet-900 cursor-pointer"
   on:mouseenter={onMouseOver}
   on:mouseleave={onMouseOut}
   bind:clientWidth={elementWidth}
@@ -44,5 +44,6 @@
   <div
     style="width: {$underlineWidth}px;"
     class="h-[2px] rounded-sm bg-amber-300 md:bg-violet-900"
+    aria-hidden="true"
   />
 </button>
