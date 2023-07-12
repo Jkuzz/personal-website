@@ -2,11 +2,11 @@
 import Layout from '../layouts/Layout.astro'
 import ContentSection from '../layouts/ContentSection.astro'
 import SocialMedia from '../components/SocialMedia.astro'
-import TextCube from '../components/TextCube.svelte'
+import ProjectsList from '../components/ProjectsList.astro'
 
+import TextCube from '../components/TextCube.svelte'
 import PageHeader from '../components/PageHeader.svelte'
 import ToolScrollbar from '../components/ToolScrollbar.svelte'
-import ProjectsList from '../components/ProjectsList.svelte'
 // import Scrollbar from '../components/Scrollbar.svelte'
 // import BackgroundTexture from '../components/BackgroundTexture.svelte'
 ---
@@ -53,7 +53,7 @@ import ProjectsList from '../components/ProjectsList.svelte'
       title="The things I've built"
       colour="dark"
     >
-      <ProjectsList client:visible />
+      <ProjectsList />
     </ContentSection>
 
     <ContentSection
