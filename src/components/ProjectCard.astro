@@ -1,0 +1,112 @@
+---
+import ConditionaWrapper from './ConditionalWrapper.svelte'
+import gitLogo from '../assets/Github-logo.svg'
+import webIcon from '../assets/icon_web.svg'
+
+interface Props {
+  index: number
+  title: string
+  text: string
+  img: string
+  alt: string
+  tools: string[]
+  githubUrl?: string
+  demoUrl?: string
+}
+
+const {
+  index,
+  githubUrl = undefined,
+  demoUrl = undefined,
+  img,
+  alt,
+  title,
+  tools,
+  text,
+} = Astro.props
+
+let zigZagClass = index % 2 == 0 ? '-left-10' : '-right-10'
+let zigZagWrapperClass = index % 2 == 0 ? 'self-start' : 'self-end'
+---
+
+<li class={'flex flex-col relative ' + zigZagWrapperClass}>
+  <ConditionaWrapper
+    condition={!!demoUrl}
+    href={demoUrl}
+    target="_blank"
+  >
+    <img
+      src={img}
+      {alt}
+      class:list={[
+        index % 2 == 0
+          ? 'translate-x-28 hover:translate-x-72'
+          : '-translate-x-28 hover:-translate-x-72',
+      ]}
+      class="hidden w-[90vw] rounded-md transition-all duration-500 hover:shadow-lg md:block md:w-[60vw] lg:w-[50vw] xl:w-[40vw]"
+    />
+  </ConditionaWrapper>
+
+  <ConditionaWrapper
+    condition={!!demoUrl}
+    href={demoUrl}
+    target="_blank"
+  >
+    <img
+      src={img}
+      {alt}
+      class="rounded-t-md md:hidden"
+    />
+  </ConditionaWrapper>
+  <div
+    class={'flex md:w-96 md:min-h-[20rem] md:absolute bg-gray-200 text-black rounded-b-md md:rounded-md md:-top-10 md:-bottom-10 ' +
+      zigZagClass}
+  >
+    <div class="flex flex-col justify-between gap-y-4 p-4">
+      <h3 class="whitespace-nowrap text-center text-xl font-bold">
+        {title}
+      </h3>
+      <p
+        class="text-sm"
+        set:html={text}
+      />
+      <ul class="flex flex-row flex-wrap gap-2">
+        {
+          tools.map((tool) => (
+            <li class="cursor-default rounded-sm bg-amber-400 p-1 text-xs text-black">{tool}</li>
+          ))
+        }
+      </ul>
+      <div class="flex flex-row">
+        {
+          githubUrl && (
+            <a
+              target="_blank"
+              href={githubUrl}
+              class="m-1 w-6 origin-bottom-right transition-all hover:-translate-y-1 hover:rotate-6"
+            >
+              <img
+                src={gitLogo}
+                alt="Source code"
+              />
+            </a>
+          )
+        }
+        {
+          demoUrl && (
+            <a
+              target="_blank"
+              href={demoUrl}
+              class="m-1 w-6 origin-bottom-right transition-all hover:-translate-y-1 hover:rotate-6"
+            >
+              <img
+                src={webIcon}
+                alt="Live site"
+              />
+            </a>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</li>
