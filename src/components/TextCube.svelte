@@ -9,7 +9,7 @@
     'Web developer',
     'Frontend developer',
     'Problem solver',
-    'Learner',
+    'Enthusiastic Learner',
     'Tech nerd',
     'Data enjoyer',
     'Experimenter',

@@ -135,16 +135,3 @@ export const projects = [
   //   tools: ['C#', 'Unity'],
   // },
 ]
-
-export const coursework = [
-  {
-    title: 'Point of Sale App',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
-  },
-  {
-    title: 'GraphQL server',
-    text: 'Example text about the project. Here I will say how it was created and what purpose it serves. I will also list which technologies were used in making it. ',
-    img: 'Vue_Logo.svg',
-  },
-]
