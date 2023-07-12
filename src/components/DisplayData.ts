@@ -88,7 +88,7 @@ export const projects = [
   },
   {
     title: 'Portfolio',
-    text: "A small static site to showcase myself and my projects. I used this opportunity to get familiar with Svelte and improve my responsive design skills. You're looking at it right now!",
+    text: "I designed and developed this small static site to showcase myself and my projects. I used this opportunity to get familiar with Svelte and improve my responsive design skills. You're looking at it right now!",
     img: 'portfolio.webp',
     alt: 'Portfolio screenshot',
     tools: ['TypeScript', 'Astro', 'Svelte', 'Tailwind', 'Vite'],
