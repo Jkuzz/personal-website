@@ -59,17 +59,19 @@ let zigZagWrapperClass = index % 2 == 0 ? 'self-start' : 'self-end'
     />
   </ConditionaWrapper>
   <div
-    class={'flex md:w-96 md:min-h-[20rem] md:absolute bg-gray-200 text-black rounded-b-md md:rounded-md md:-top-10 md:-bottom-10 ' +
+    class={'flex md:w-[22rem] md:min-h-[20rem] md:absolute bg-gray-200 text-black rounded-b-md md:rounded-md md:-top-8 md:-bottom-8 ' +
       zigZagClass}
   >
     <div class="flex flex-col justify-between gap-y-4 p-4">
-      <h3 class="whitespace-nowrap text-center text-xl font-bold">
-        {title}
-      </h3>
-      <p
-        class="text-sm"
-        set:html={text}
-      />
+      <div class="space-y-8">
+        <h3 class="whitespace-nowrap text-left text-xl font-bold">
+          {title}
+        </h3>
+        <p
+          class="text-sm"
+          set:html={text}
+        />
+      </div>
       <ul class="flex flex-row flex-wrap gap-2">
         {
           tools.map((tool) => (

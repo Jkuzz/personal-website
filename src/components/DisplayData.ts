@@ -51,12 +51,12 @@ export const tools = [
   // },
   {
     title: 'Git',
-    text: 'I use Git for version control on every project and host most of them on GitHub. For larger projects, I use GitHub Actions for CI.',
+    text: 'I use Git for version control on every project, host most of repositories on GitHub and deploy some on Pages. For larger projects, I use GitHub Actions for CI.',
     img: gitLogo,
   },
   {
     title: 'Svelte',
-    text: 'I am learning Svelte and made this website using it to test it out!',
+    text: 'I am learning Svelte as a lightweight framework alternative and made this website using it to test it out!',
     img: svelteLogo,
   },
 ]
@@ -122,7 +122,7 @@ export const projects = [
   // },
   {
     title: 'Point of Sale app',
-    text: 'This is a fully modular Point of Sale application in Java. It provides features necessary for a restaurant to keep track of tables, tabs, products and inventory. All data is stored in a remote database. This app was created as a project for my university Java course. As such, it was not thoroughly tested so bugs/crashes may be present :).',
+    text: 'This is a fully modular Point of Sale application in Java. It provides features necessary for a restaurant to keep track of tables, tabs, products and inventory. This app was created as a project for my university Java course. As such, it was not thoroughly tested so bugs/crashes may be present :).',
     img: 'point-of-sale.webp',
     alt: 'Point of Sale App',
     tools: ['Java', 'Swing', 'MySQL', 'Maven'],
