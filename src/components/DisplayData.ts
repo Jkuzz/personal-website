@@ -7,6 +7,8 @@ import svelteLogo from '../assets/Svelte-logo.svg'
 import pythonLogo from '../assets/Python-logo.svg'
 import javaLogo from '../assets/Java-logo.svg'
 import gitLogo from '../assets/Github-logo.svg'
+import reactLogo from '../assets/React-logo.svg'
+import nextLogo from '../assets/Nextjs-logo.svg'
 
 export const tools = [
   {
@@ -54,10 +56,20 @@ export const tools = [
     text: 'I use Git for version control on every project, host most of repositories on GitHub and deploy some on Pages. For larger projects, I use GitHub Actions for CI.',
     img: gitLogo,
   },
+  // {
+  //   title: 'Svelte',
+  //   text: 'I am learning Svelte as a lightweight framework alternative and made this website using it to test it out!',
+  //   img: svelteLogo,
+  // },
   {
-    title: 'Svelte',
-    text: 'I am learning Svelte as a lightweight framework alternative and made this website using it to test it out!',
-    img: svelteLogo,
+    title: 'React',
+    text: 'I was inspired to start learning React by the community and support behind it. I am building an experimental social media platform project right now.',
+    img: reactLogo,
+  },
+  {
+    title: 'Next.js',
+    text: 'I am learning Next alongside React, Prisma nad tRPC to build a full stack serverless application.',
+    img: nextLogo,
   },
 ]
 
