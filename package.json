@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/svelte": "^3.1.0",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "astro": "^2.7.2",
     "class-variance-authority": "^0.6.1",
     "svelte": "^4.0.1",
